@@ -1,0 +1,108 @@
+input.parsley-success,
+ select.parsley-success,
+ textarea.parsley-success {
+   color: #468847;
+   background-color: #DFF0D8;
+   border: 1px solid #D6E9C6;
+ }
+
+ input.parsley-error,
+ select.parsley-error,
+ textarea.parsley-error {
+   color: #B94A48;
+   background-color: #F2DEDE;
+   border: 1px solid #EED3D7;
+ }
+
+ .parsley-errors-list {
+   margin: 2px 0 3px;
+   padding: 0;
+   list-style-type: none;
+   font-size: 0.9em;
+   line-height: 0.9em;
+   opacity: 0;
+
+   transition: all .3s ease-in;
+   -o-transition: all .3s ease-in;
+   -moz-transition: all .3s ease-in;
+   -webkit-transition: all .3s ease-in;
+ }
+
+ .parsley-errors-list.filled {
+   opacity: 1;
+ }
+ 
+ .parsley-type,
+ .parsley-required,
+ .parsley-equalto,
+ .parsley-pattern,
+ .parsley-urlstrict,
+ .parsley-length,
+ .parsley-checkemail{
+  color:#ff0000;
+ }
+ 
+ .cont {
+ display: block;
+ position: relative;
+ padding-left: 35px;
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 22px;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ }
+ 
+ /* Hide the browser's default radio button */
+ .cont input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+ }
+ 
+ /* Create a custom radio button */
+ .checkmark {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 25px;
+ width: 25px;
+ background-color: #eee;
+ border-radius: 50%;
+ }
+ 
+ /* On mouse-over, add a grey background color */
+ .cont:hover input ~ .checkmark {
+ background-color: #ccc;
+ }
+ 
+ /* When the radio button is checked, add a blue background */
+ .cont input:checked ~ .checkmark {
+ background-color: #2196F3;
+ }
+ 
+ /* Create the indicator (the dot/circle - hidden when not checked) */
+ .checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+ }
+ 
+ /* Show the indicator (dot/circle) when checked */
+ .cont input:checked ~ .checkmark:after {
+ display: block;
+ }
+ 
+ /* Style the indicator (dot/circle) */
+ .cont .checkmark:after {
+ top: 9px;
+ left: 9px;
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background: white;
+ }
